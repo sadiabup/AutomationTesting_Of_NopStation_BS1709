@@ -39,8 +39,9 @@ The **Page Object Model (POM)** is a design pattern used in automated testing to
 -   **Run Tests**:
     
     -   To run all the tests using Playwright’s test runner:
-    `npx playwright test` 
-        
+    `npx playwright test`
+![Image](https://github.com/user-attachments/assets/e459594c-f3f7-494d-81f9-6c4430969133)
+
     -   To run tests in a specific browser (Chromium, Firefox, WebKit), you can use:
 `npx playwright test --project=chromium` 
         
@@ -52,6 +53,7 @@ The **Page Object Model (POM)** is a design pattern used in automated testing to
 -   **View Test Results**:
     
     -   Playwright provides detailed logs and reports after test execution. You can analyze the results directly in the terminal or configure Playwright to output reports in various formats (e.g., HTML, JSON).
+      ![Image](https://github.com/user-attachments/assets/7070cc1a-495e-47e2-9f80-dc00df6c95d4)
 -   **Configure Playwright**:
     
     -   The configuration for Playwright is set up to run tests in different browsers (Chromium, Firefox, WebKit). You can also specify parallelism and other settings (e.g., test retries, timeouts) in the `playwright.config.ts` file.
