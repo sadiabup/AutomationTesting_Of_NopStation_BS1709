@@ -124,7 +124,7 @@ export default config;
 
 1.  **Setup Test Data**:
     
-    -   In the `testData.ts` file, you store test data such as user credentials (email, password), product details (book names, quantities), and address information (for the checkout process). This allows for easy updates to data without having to modify individual tests.
+    -   In the `testData.ts` file, store test data such as user credentials (email, password), product details (book names, quantities), and address information (for the checkout process). This allows for easy updates to data without having to modify individual tests.
 2.  **Test File Structure**:
     
     -   Each test file corresponds to a specific page or a group of related actions:
