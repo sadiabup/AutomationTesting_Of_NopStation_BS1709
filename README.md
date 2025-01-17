@@ -255,11 +255,12 @@ test.use({ browserName: 'firefox' });
 ![Image](https://github.com/user-attachments/assets/c6c5b3d5-fdba-468e-9452-4615a90614b9)
 
 #### After adding prodruct into Cart 
-![Image](https://github.com/user-attachments/assets/e86f4cc1-c5f3-43c3-a7dd-5a327d67e552)
-  
-![Image](https://github.com/user-attachments/assets/8a344975-01b0-4a0b-bcaf-f2433445e2cb)
+
+  ![Image](https://github.com/user-attachments/assets/8a344975-01b0-4a0b-bcaf-f2433445e2cb)
 
 #### After completing Checkout proccess fully
 ![Image](https://github.com/user-attachments/assets/df38a89e-39f4-426f-b597-cc83fd63987f)
 
 #### Allure Report
+
+![Image](https://github.com/user-attachments/assets/e86f4cc1-c5f3-43c3-a7dd-5a327d67e552)
