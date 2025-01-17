@@ -166,14 +166,16 @@ export default config;
     
     -   Playwright’s test runner (`npx playwright test`) executes the test cases sequentially or in parallel (based on configuration).
     -   Playwright will launch the browser, navigate to the specified pages, interact with elements, and perform assertions.
+      
+      ![Image](https://github.com/user-attachments/assets/0f794b14-ad00-4807-a05a-6eadb23fcffd)
 -   **Assertions**:
-    
     -   Playwright provides built-in matchers like `expect(locator).toHaveText()` and `expect(locator).toBeVisible()` to validate the correctness of the application.
     -   Assertions are used to confirm that the page state is correct after performing actions (e.g., successful login, item added to cart).
 -   **Reporting**:
     
     -   After test execution, Playwright outputs detailed reports in the terminal. You can also configure Playwright to generate reports in different formats (e.g., HTML or JSON) for better analysis of test results.
 
+![Image](https://github.com/user-attachments/assets/1a536a59-c72c-4eac-8fbf-cdc4b1550894)
 
 
 ## Test Execution Flowchart
