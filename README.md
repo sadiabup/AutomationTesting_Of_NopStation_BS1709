@@ -34,7 +34,9 @@ The **Page Object Model (POM)** is a design pattern used in automated testing to
 -   **Install Dependencies**:
     
     -   Install Playwright and other necessary dependencies by running:
-   `npm install` 
+   `npm install`
+
+![Image](https://github.com/user-attachments/assets/e3f17ab4-aaa5-427c-9575-c956928f2ffd)
         
 -   **Run Tests**:
     
