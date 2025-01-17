@@ -20,7 +20,7 @@ import { devices } from '@playwright/test';
 };  
  
 const config: PlaywrightTestConfig = {
-  timeout: 60 * 1000 * 5, // Set global timeout to 5 minutes (300000 ms)
+  timeout: 60 * 1000 * 5, 
  
   projects: [
     {
@@ -29,36 +29,24 @@ const config: PlaywrightTestConfig = {
         ...devices["Desktop Chrome"], // Ensure correct casing
       },
     },
-    /*
-    {
-      name: "firefox",
-      use: {
-        ...devices["Desktop Firefox"],
-      },
-    },
-    */
+   
   ],
  
   testMatch: ["test/checkoutPages.test.ts"], // Verify path
  
-  //testMatch: ["pomtest/addToCart.test.ts"], // Verify path
+  
  
   use: {
-   // connectOptions: {
-     // wsEndpoint: `wss://cdp.lambdatest.com/playwright?capabilities=${encodeURIComponent(JSON.stringify(capabilities))}`,
-    //},
- 
- 
+    
     headless: false,
-    screenshot: "on", // "only-on-failure" can be used as well
+    screenshot: "on", 
     video: "retain-on-failure",
-    //timeout: 60 * 1000 * 5, // Test-specific timeout, also set to 5 minutes
     launchOptions: {
       slowMo: 1000,
     },
   },
  
-  retries: 0, // Increase retries if needed
+  retries: 0, 
  
   reporter: [
     ["dot"],
