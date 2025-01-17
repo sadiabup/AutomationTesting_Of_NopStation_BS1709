@@ -260,3 +260,5 @@ test.use({ browserName: 'firefox' });
 
 #### After completing Checkout proccess fully
 ![Image](https://github.com/user-attachments/assets/df38a89e-39f4-426f-b597-cc83fd63987f)
+
+#### Allure Report
