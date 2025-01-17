@@ -7,7 +7,7 @@
 --------------------------------
 The project is designed to automate end-to-end testing of a web application using Playwright and the Page Object Model (POM). It is structured to ensure reusability, maintainability, and scala-bility of tests, focusing on autom-ating user interactions with the **Home**, **Register**, **Login**, **Books**, and **Checkout** pages. Each page's behavior is represented by a separate Page Object, and tests are written to interact with these objects and validate the application’s functionality.
 
-- 
+
 
 
 ## Playwright and Page Object Model (POM)
@@ -244,11 +244,19 @@ projects: [
 test.use({ browserName: 'firefox' });
 
 ```
-**Test Results**
+- ## Test Results
+  
+#### RegistrationPage
+  
 ![Image](https://github.com/user-attachments/assets/b1004233-9ce0-4c4b-971c-06e8c17bda2f)
 
+#### After logIn 
+   
 ![Image](https://github.com/user-attachments/assets/c6c5b3d5-fdba-468e-9452-4615a90614b9)
 
+#### After adding prodruct into Cart 
+  
 ![Image](https://github.com/user-attachments/assets/8a344975-01b0-4a0b-bcaf-f2433445e2cb)
 
+#### After completing Checkout proccess fully
 ![Image](https://github.com/user-attachments/assets/df38a89e-39f4-426f-b597-cc83fd63987f)
