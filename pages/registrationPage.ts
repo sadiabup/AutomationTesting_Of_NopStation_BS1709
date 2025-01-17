@@ -1,84 +1,74 @@
-import { Page , expect } from "@playwright/test";
- 
-export default class RegisterPage{
- 
-        constructor(public page: Page){
- 
-        }
-        async register(){
-            return this.page.locator("//a[@class='ico-register' and text()='Register']").click();
-        }
- 
-        async enterGender(){
-        return this.page.locator("//input[@type='radio' and contains(@value, 'F')] ");
-           
-        }
- 
- 
-        async enterFirstName(firstname: string){
-        await this.page.locator("//input[@name= 'FirstName']")
-        .type(firstname);
-        }
-         
-        async enterLasttName(lastname: string){
-        await this.page.locator("//input[@name= 'LastName'] ")
-        .type(lastname);
-        }
- 
-        async DateOfBirth(dateofbirth: string){
-        await this.page.locator("//select[@name='DateOfBirthDay'] ")
-        .type(dateofbirth)
-        }
- 
-        async enterEmail(email: string){
-        await this.page.locator("//input[@name='Email'] ")
-        .type(email);
-        }
- 
-        async enterCompanyDetails(company: string){
-        await this.page.locator("//input[@name='Company'] ")
-        .type(company);
-        }
- 
-        async enterOptions(){
-        return this.page.locator("//input[@type='checkbox' and @name='Newsletter'] ")
-        }
- 
-        async enterPassword(password: string){
-        await this.page.locator("//input[@type='password' and @id='Password'] ")
-        .type(password);
-        }
- 
-        async enterConfirmPassword(password: string){
-        await this.page.locator("//input[@type='password' and @name='ConfirmPassword'] ")
-        .type(password);
-        }
- 
-        async clickRegister(){
-            await Promise.all([
-                this.page.waitForNavigation({waitUntil:"networkidle"}),
-                this.page.click("//button[@type='submit' and @name='register-button'] ")
-            ])
-       
-        }
+import { Page, expect } from "@playwright/test";
 
+export default class RegisterPage {
+  constructor(private page: Page) {}
 
-       
-        async registerCompletedMessage() {
-                const firstMsg = await this.page.locator("//div[@class='result xh-highlight']");
-                
-           
-                // Wait for the message to appear
-                //await thankYouMessage.waitFor({ state: 'visible' });
-           
-                // Assert it is visible
-                expect(await firstMsg.isVisible()).toBe(false);
-                
-            }
- 
-                       
-                   
-               
- 
-    }
- 
+  // Locators
+  private locators = {
+    registerLink: "//a[@class='ico-register' and text()='Register']",
+    gender: "//input[@type='radio' and contains(@value, 'F')]",
+    firstName: "//input[@name='FirstName']",
+    lastName: "//input[@name='LastName']",
+    dateOfBirth: "//select[@name='DateOfBirthDay']",
+    email: "//input[@name='Email']",
+    company: "//input[@name='Company']",
+    newsletter: "//input[@type='checkbox' and @name='Newsletter']",
+    password: "//input[@type='password' and @id='Password']",
+    confirmPassword: "//input[@type='password' and @name='ConfirmPassword']",
+    registerButton: "//button[@type='submit' and @name='register-button']",
+    registrationMessage: "//div[@class='result xh-highlight']"
+  };
+
+  // Actions
+  async register() {
+    await this.page.locator(this.locators.registerLink).click();
+  }
+
+  async enterGender() {
+    await this.page.locator(this.locators.gender).check();
+  }
+
+  async enterFirstName(firstName: string) {
+    await this.page.locator(this.locators.firstName).type(firstName);
+  }
+
+  async enterLastName(lastName: string) {
+    await this.page.locator(this.locators.lastName).type(lastName);
+  }
+
+  async enterDateOfBirth(dateOfBirth: string) {
+    await this.page.locator(this.locators.dateOfBirth).selectOption(dateOfBirth);
+  }
+
+  async enterEmail(email: string) {
+    await this.page.locator(this.locators.email).type(email);
+  }
+
+  async enterCompany(company: string) {
+    await this.page.locator(this.locators.company).type(company);
+  }
+
+  async enterNewsletterOption() {
+    await this.page.locator(this.locators.newsletter).check();
+  }
+
+  async enterPassword(password: string) {
+    await this.page.locator(this.locators.password).type(password);
+  }
+
+  async enterConfirmPassword(password: string) {
+    await this.page.locator(this.locators.confirmPassword).type(password);
+  }
+
+  async clickRegister() {
+    await Promise.all([
+      this.page.waitForNavigation({ waitUntil: "networkidle" }),
+      this.page.locator(this.locators.registerButton).click()
+    ]);
+  }
+
+  async registerCompletedMessage() {
+    const registrationMessage = await this.page.locator(this.locators.registrationMessage);
+    expect(await registrationMessage.isVisible()).toBe(false);
+  }
+}

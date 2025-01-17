@@ -48,7 +48,7 @@
         "testDir": "P:/BS_Web_Automation",
         "testIgnore": [],
         "testMatch": [
-          "test/addToCart.test.ts"
+          "test/checkoutPages.test.ts"
         ],
         "timeout": 300000
       }
@@ -61,20 +61,20 @@
   },
   "suites": [
     {
-      "title": "test\\addToCart.test.ts",
-      "file": "test/addToCart.test.ts",
+      "title": "test\\checkoutPages.test.ts",
+      "file": "test/checkoutPages.test.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "Page object test demo",
-          "file": "test/addToCart.test.ts",
-          "line": 11,
+          "title": "Page Object Test Demo",
+          "file": "test/checkoutPages.test.ts",
+          "line": 23,
           "column": 6,
           "specs": [
             {
-              "title": "Register test_01",
+              "title": "Register Test_01",
               "ok": true,
               "tags": [],
               "tests": [
@@ -88,17 +88,17 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 12149,
+                      "duration": 11938,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-15T22:43:48.278Z",
+                      "startTime": "2025-01-16T23:55:35.710Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "P:\\BS_Web_Automation\\test-results\\test-addToCart-Page-object-test-demo-Register-test-01-chrome\\test-finished-1.png"
+                          "path": "P:\\BS_Web_Automation\\test-results\\test-checkoutPages-Page-Object-Test-Demo-Register-Test-01-chrome\\test-finished-1.png"
                         }
                       ]
                     }
@@ -106,13 +106,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "b064594f2439f937152a-b18fc12e916149dc1422",
-              "file": "test/addToCart.test.ts",
-              "line": 14,
-              "column": 5
+              "id": "5705a87a088a627b8ebe-c8db87e3ccc2674c7ea3",
+              "file": "test/checkoutPages.test.ts",
+              "line": 24,
+              "column": 7
             },
             {
-              "title": "Login test_02",
+              "title": "Login Test_02",
               "ok": true,
               "tags": [],
               "tests": [
@@ -126,21 +126,21 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 5448,
+                      "duration": 9007,
                       "errors": [],
                       "stdout": [
                         {
-                          "text": "Actual SignIn Message: Welcome, Please Sign In!\n"
+                          "text": "Login successful with email: sadia111@gmail.com\n"
                         }
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-15T22:44:00.645Z",
+                      "startTime": "2025-01-16T23:55:48.152Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "P:\\BS_Web_Automation\\test-results\\test-addToCart-Page-object-test-demo-Login-test-02-chrome\\test-finished-1.png"
+                          "path": "P:\\BS_Web_Automation\\test-results\\test-checkoutPages-Page-Object-Test-Demo-Login-Test-02-chrome\\test-finished-1.png"
                         }
                       ]
                     }
@@ -148,13 +148,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "b064594f2439f937152a-48d29760857940ae8778",
-              "file": "test/addToCart.test.ts",
-              "line": 33,
-              "column": 5
+              "id": "5705a87a088a627b8ebe-e3c5d10f1bcf15aa70f2",
+              "file": "test/checkoutPages.test.ts",
+              "line": 38,
+              "column": 7
             },
             {
-              "title": "Add to cart test_03",
+              "title": "Add to Cart Test_03",
               "ok": true,
               "tags": [],
               "tests": [
@@ -168,7 +168,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 23365,
+                      "duration": 24665,
                       "errors": [],
                       "stdout": [
                         {
@@ -177,12 +177,12 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-15T22:44:06.101Z",
+                      "startTime": "2025-01-16T23:55:57.173Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "P:\\BS_Web_Automation\\test-results\\test-addToCart-Page-object-test-demo-Add-to-cart-test-03-chrome\\test-finished-1.png"
+                          "path": "P:\\BS_Web_Automation\\test-results\\test-checkoutPages-Page-Object-Test-Demo-Add-to-Cart-Test-03-chrome\\test-finished-1.png"
                         }
                       ]
                     }
@@ -190,13 +190,13 @@
                   "status": "expected"
                 }
               ],
-              "id": "b064594f2439f937152a-df28ca0d5150b7dce1d6",
-              "file": "test/addToCart.test.ts",
-              "line": 63,
-              "column": 5
+              "id": "5705a87a088a627b8ebe-3f1fa033064b7c77ba43",
+              "file": "test/checkoutPages.test.ts",
+              "line": 47,
+              "column": 7
             },
             {
-              "title": "Checkout test_04",
+              "title": "Checkout Test Case 04",
               "ok": true,
               "tags": [],
               "tests": [
@@ -210,7 +210,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 57685,
+                      "duration": 53452,
                       "errors": [],
                       "stdout": [
                         {
@@ -219,12 +219,12 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-15T22:44:29.475Z",
+                      "startTime": "2025-01-16T23:56:21.853Z",
                       "attachments": [
                         {
                           "name": "screenshot",
                           "contentType": "image/png",
-                          "path": "P:\\BS_Web_Automation\\test-results\\test-addToCart-Page-object-test-demo-Checkout-test-04-chrome\\test-finished-1.png"
+                          "path": "P:\\BS_Web_Automation\\test-results\\test-checkoutPages-Page-Ob-d21d3--Demo-Checkout-Test-Case-04-chrome\\test-finished-1.png"
                         }
                       ]
                     }
@@ -232,10 +232,10 @@
                   "status": "expected"
                 }
               ],
-              "id": "b064594f2439f937152a-5f79844d455e5d19c9cc",
-              "file": "test/addToCart.test.ts",
-              "line": 83,
-              "column": 5
+              "id": "5705a87a088a627b8ebe-b27f45293b8654656f8e",
+              "file": "test/checkoutPages.test.ts",
+              "line": 59,
+              "column": 7
             }
           ]
         }
@@ -244,8 +244,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-15T22:43:47.486Z",
-    "duration": 99880.164,
+    "startTime": "2025-01-16T23:55:34.534Z",
+    "duration": 101056.894,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,

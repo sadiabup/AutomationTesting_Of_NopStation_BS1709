@@ -1,42 +1,44 @@
 import { Page, expect } from "@playwright/test";
- 
+
 export default class LoginPage {
-    constructor(public page: Page) {}
+  constructor(private page: Page) {}
+  private locators = {
+    emailInput: "//input[@name='Email']",
+    passwordInput: "//input[@type='password' and @id='Password']",
+    rememberMeCheckbox: "//input[@type='checkbox' and @name='RememberMe']",
+    loginButton: "//button[@type= 'submit' and @class= 'button-1 login-button']",
+    loginLink: "//a[@class='ico-login' and text()='Log in']",
+    pageTitle: "//div[@class='page-title']",
+  };
 
-    async logIn(){
-        return this.page.locator("//a[@class='ico-login' and text()='Log in']").click();
-    }
- 
-    async login(email: string, password: string) {
-        await this.getPageTitle();
-        await this.enterEmail(email);
-        await this.enterPassword(password);
-        await this.checkedRememberMe();
-        await this.clickLogin();
- 
-    }
+  async navigateToLoginPage() {
+    await this.page.locator(this.locators.loginLink).click();
+  }
+ async login(email: string, password: string) {
+    await this.verifyPageTitle();
+    await this.enterEmail(email);
+    await this.enterPassword(password);
+    await this.toggleRememberMe();
+    await this.clickLoginButton();
+  }
+ async verifyPageTitle() {
+    const pageTitle = await this.page.locator(this.locators.pageTitle).textContent();
+    expect(pageTitle).toBe("Welcome, Please Sign In!");
+  }
 
-    async getPageTitle() {
-        return this.page.locator("//div[@class='page-title']");
-    }
- 
-    async enterEmail(email: string) {
-        await this.page.locator("//input[@name='Email']").type(email);
-    }
- 
-    async enterPassword(password: string) {
-        await this.page.locator("//input[@type='password' and @id='Password']").type(password);
-    }
- 
-    async checkedRememberMe() {
-        return this.page.locator("//input[@type='checkbox' and @name='RememberMe']");
-    }
- 
-    async clickLogin() {
-        await Promise.all([
-            this.page.waitForNavigation(),
-            this.page.click("//button[@type= 'submit' and @class= 'button-1 login-button']")
-        ]);
-    }
+ async enterEmail(email: string) {
+    await this.page.locator(this.locators.emailInput).type(email);
+  }
+ async enterPassword(password: string) {
+    await this.page.locator(this.locators.passwordInput).type(password);
+  }
+ async toggleRememberMe() {
+    await this.page.locator(this.locators.rememberMeCheckbox).check();
+  }
+ async clickLoginButton() {
+    await Promise.all([
+      this.page.waitForNavigation({ waitUntil: "networkidle" }),
+      this.page.locator(this.locators.loginButton).click(),
+    ]);
+  }
 }
- 
