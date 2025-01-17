@@ -245,4 +245,10 @@ test.use({ browserName: 'firefox' });
 
 ```
 **Test Results**
+![Image](https://github.com/user-attachments/assets/b1004233-9ce0-4c4b-971c-06e8c17bda2f)
 
+![Image](https://github.com/user-attachments/assets/c6c5b3d5-fdba-468e-9452-4615a90614b9)
+
+![Image](https://github.com/user-attachments/assets/8a344975-01b0-4a0b-bcaf-f2433445e2cb)
+
+![Image](https://github.com/user-attachments/assets/df38a89e-39f4-426f-b597-cc83fd63987f)
