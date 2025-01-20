@@ -10,23 +10,25 @@ This project automates end-to-end testing of a web application using Playwright 
 
 
 
-## Playwright and Page Object Model (POM)
+### Playwright and Page Object Model (POM)  
 
-**Paywright** is a powerful tool used for automating browser tasks like navi-gation, form submission, and UI element interaction. It allows the execution of end-to-end tests that simulate how real users interact with web applications. These tests can be executed across different browsers and platforms, which makes it ideal for ensuring cross-browser compatibility.
+**Playwright** is a versatile automation framework for browser tasks, enabling actions like navigation, form handling, and UI interaction. It supports cross-browser and cross-platform testing, making it ideal for validating real-world user scenarios and ensuring compatibility across environments.  
 
-The **Page Object Model (POM)** is a design pattern used in automated testing to create an abstraction layer for web pages. Instead of writing repetitive code to interact with the same web elements in multiple tests, POM allows testers to create separate classes that represent each page. Each class encapsulates the actions that can be performed on that page, such as filling out forms, clicking buttons, or verifying elements. This promotes code reusability, modularity, and easier maintenance.
+The **Page Object Model (POM)** is a testing design pattern that simplifies automation by representing web pages as dedicated classes. Each class encapsulates actions for its respective page, such as form submission or element verification, reducing code repetition. POM enhances test modularity, reusability, and maintainability, streamlining the automation process.  
 
-##  **Purpose of This Project :**
--   **Page Classes**:
-    
-    -   **HomePage**: Defines actions related to the home page, such as verifying page elements (e.g., banners, categories) and interacting with navigation items.
-    -   **RegisterPage**: Automates actions related to the user registration form, such as entering details (first name, last name, email, etc.), and submitting the form.
-    -   **LoginPage**: Automates actions for logging in, including entering credentials, clicking the login button, and verifying successful login.
-    -   **BooksPage**: Automates interactions with books/products, including adding products to the cart, updating quantities, and verifying cart contents.
-    -   **CheckoutPage**: Automates the checkout process, including entering billing information, selecting shipping methods, and completing the order.
--   **Locator Class**:
-    
-    -   Stores all the locators (selectors) for the elements on the page, providing an easy way to access and modify selectors across the repository. This helps in maintaining consistency and minimizing selector duplication.
+
+## **Purpose of This Project**
+
+- **Page Classes**:  
+  - **HomePage**: Verifies elements like banners and handles navigation.  
+  - **RegisterPage**: Automates user registration and form submission.  
+  - **LoginPage**: Manages login actions and verification.  
+  - **BooksPage**: Handles product interactions, including cart management.  
+  - **CheckoutPage**: Automates billing, shipping, and order completion.  
+
+- **Locator Class**:  
+  - Centralizes element locators for easier updates and consistency.  
+
 
 ## Testing Process Structure
 ### 1. **Test Setup and Configuration**
@@ -127,36 +129,7 @@ export default config;
     -   In the `testData.ts` file, store test data such as user credentials (email, password), product details (book names, quantities), and address information (for the checkout process). This allows for easy updates to data without having to modify individual tests.
       ![Image](https://github.com/user-attachments/assets/1bc13c7f-fea6-4250-b72a-8e69ea82dfa5)
 
-2.  **Test File Structure**:
-    
-    -   Each test file corresponds to a specific page or a group of related actions:
-        -   **HomePage.test.ts**: Tests related to the Home page.
-        -   **RegisterPage.test.ts**: Tests related to user registration. A user can create an account by filling out a registration form with their details (first name, last name, email, etc.).
-            -   ***Test Scenario***:
-                - Open the registration page.
-                -   Fill out the registration form.
-                -   Submit the form.
-                -   Verify that the registration is successful.
-        -   **LoginPage.test.ts**: Tests for login functionality. A registered user can log in using their email and password.
-               -   ***Test Scenario***:
-                    -   Navigate to the login page.
-                    -   Enter the credentials.
-                    -   Click on the login button.
-                   -   Verify the user is logged in successfully by checking for a welcome message.
-        -   **BooksPage.test.ts**: Tests for adding items to the cart, managing cart contents, etc.  A user can add one or more books to their shopping cart.
-               -   **Test Scenario**:
-                   -   Navigate to the books section.
-                   -   Add products to the cart.
-                   -   Verify the cart contents.
-                   -   Update the quantity of the product.
-        -   **CheckoutPage.test.ts**: Tests for the checkout process, including form filling and order confirmation.1. A user can proceed with the checkout process to place an order.
-            -   **Test Scenario**:
-                 -   Navigate to the checkout page.
-                -   Fill in the billing address and shipping information.
-                -   Select a payment method.
-                -   Complete the order.
-                -   Verify that the order confirmation message appears.
-        
+2.  
 3. **Write Test Scenarios**:
 
 -   Test cases are written in a declarative way using Playwright’s `test()` function. Each test defines the actions that simulate user behavior and assertions that validate expected outcomes.
@@ -263,4 +236,4 @@ test.use({ browserName: 'firefox' });
 
 #### Allure Report
 
-![Image](https://github.com/user-attachments/assets/e86f4cc1-c5f3-43c3-a7dd-5a327d67e552)
+
