@@ -3,9 +3,9 @@
 
 
 
-## Overview
---------------------------------
-The project is designed to automate end-to-end testing of a web application using Playwright and the Page Object Model (POM). It is structured to ensure reusability, maintainability, and scala-bility of tests, focusing on autom-ating user interactions with the **Home**, **Register**, **Login**, **Books**, and **Checkout** pages. Each page's behavior is represented by a separate Page Object, and tests are written to interact with these objects and validate the application’s functionality.
+### Project Overview  
+This project automates end-to-end testing of a web application using Playwright and the Page Object Model (POM). It ensures scalable, reusable, and maintainable test scripts, focusing on automating interactions with the **Home**, **Register**, **Login**, **Books**, and **Checkout** pages. Each page is modeled as a dedicated Page Object, enabling streamlined validation of the application’s functionality.
+
 
 
 
