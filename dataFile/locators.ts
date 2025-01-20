@@ -1,63 +1,63 @@
-export const locators = {
-    // ** Login Page Locators **
-    login: {
-        loginLink: "//a[contains(text(), 'Log in')]",
-        emailInput: "//input[@id='Email']",
-        passwordInput: "//input[@id='Password']",
-        loginButton: "//button[contains(text(), 'Log in')]",
-    },
+// locators.ts
+export const registerLocators = {
+  registerLink: "//a[@class='ico-register' and text()='Register']",
+  gender: "//input[@type='radio' and contains(@value, 'F')]",
+  firstName: "//input[@name='FirstName']",
+  lastName: "//input[@name='LastName']",
+  dateOfBirth: "//select[@name='DateOfBirthDay']",
+  email: "//input[@name='Email']",
+  company: "//input[@name='Company']",
+  newsletter: "//input[@type='checkbox' and @name='Newsletter']",
+  password: "//input[@type='password' and @id='Password']",
+  confirmPassword: "//input[@type='password' and @name='ConfirmPassword']",
+  registerButton: "//button[@type='submit' and @name='register-button']",
+  registrationMessage: "//div[@class='result xh-highlight']"
+};
+export const loginLocators = {
+  emailInput: "//input[@name='Email']",
+  passwordInput: "//input[@type='password' and @id='Password']",
+  rememberMeCheckbox: "//input[@type='checkbox' and @name='RememberMe']",
+  loginButton: "//button[@type= 'submit' and @class= 'button-1 login-button']",
+  loginLink: "//a[@class='ico-login' and text()='Log in']",
+  pageTitle: "//div[@class='page-title']",
+};
 
-    // ** Registration Page Locators **
-    register: {
-        registerLink: "//a[contains(text(), 'Register')]",
-        firstNameInput: "//input[@id='FirstName']",
-        lastNameInput: "//input[@id='LastName']",
-        emailInput: "//input[@id='Email']",
-        companyInput: "//input[@id='Company']",
-        passwordInput: "//input[@id='Password']",
-        confirmPasswordInput: "//input[@id='ConfirmPassword']",
-        registerButton: "//button[@id='register-button']",
-        registrationSuccessMessage: "//div[contains(text(), 'Your registration completed')]",
-    },
+export const booksLocators = {
+  cartIcon: "//a[@class='ico-cart']",
+  emptyCartMessage: "//span[@class='cart-qty' and text()='(0)']",
+  removeButton: "//button[@name='updatecart' and @class='remove-btn']",
+  addToCartButton: "//button[contains(text(), 'Add to cart')]",
+  popupMessage: "//p[contains(text(), 'The product has been added to your')]",
+  closeButton: "//span[@class='close' and @title='Close']",
+  termsCheckbox: "//input[@type='checkbox' and @name='termsofservice']",
+  checkoutButton: "//button[@type='submit' and @name='checkout']",
+  productRow: (productName: string) => `//tr[contains(., '${productName}')]`,
+  quantityInput: "//input[contains(@name, 'itemquantity') and contains(@class, 'qty-input')]",
+  updateCartButton: "//button[@type='submit' and @name='updatecart']",
+  billingAddressMessage: "//h1[text()='Billing address']",
+};
 
-    // ** Home Page Locators **
-    home: {
-        booksCategory: "//a[contains(text(), 'Books')]",
-        jewelryCategory: "//a[contains(text(), 'Jewelry')]",
-    },
-
-    // ** Books Page Locators **
-    books: {
-        firstProductAddButton: "//div[@class='product-item'][1]//button[contains(text(), 'Add to cart')]",
-        secondProductAddButton: "//div[@class='product-item'][2]//button[contains(text(), 'Add to cart')]",
-        cartQuantityInput: "//td[contains(text(), 'PRODUCT_NAME')]//following-sibling::td//input[@class='qty-input']",
-        updateCartButton: "//button[@name='updatecart']",
-        clearCartButton: "//button[contains(text(), 'Clear cart')]",
-    },
-
-    // ** Checkout Page Locators **
-    checkout: {
-        firstNameInput: "//input[@type='text' and @name='BillingNewAddress.FirstName']",
-        lastNameInput: "//input[@name='BillingNewAddress.LastName']",
-        emailInput: "//input[@name='BillingNewAddress.Email']",
-        companyInput: "//input[@name='BillingNewAddress.Company']",
-        countryInput: "//select[@name='BillingNewAddress.CountryId']",
-        stateInput: "//select[@name='BillingNewAddress.StateProvinceId']",
-        cityInput: "//input[@name='BillingNewAddress.City']",
-        address1Input: "//input[@name='BillingNewAddress.Address1']",
-        address2Input: "//input[@name='BillingNewAddress.Address2']",
-        zipInput: "//input[@name='BillingNewAddress.ZipPostalCode']",
-        phoneInput: "//input[@name='BillingNewAddress.PhoneNumber']",
-        faxInput: "//input[@name='BillingNewAddress.FaxNumber']",
-        nextButton: "//button[@type='submit' and @id='billingaddress-next-button']",
-        shippingMethodRadio: "//input[@type='radio' and @value='Ground___Shipping.FixedByWeightByTotal']",
-        shippingNextButton: "//button[@type='submit' and @class= 'button-1 shipping-method-next-step-button']",
-        paymentMethodRadio: "//input[@type='radio' and @value='Payments.CheckMoneyOrder' and @id='paymentmethod_4']",
-        paymentNextButton: "//button[@type='submit' and @class='button-1 payment-method-next-step-button']",
-        paymentInfoNextButton: "//button[@type='submit' and @class='button-1 payment-info-next-step-button']",
-        confirmOrderButton: "//button[@type='submit' and @class='button-1 confirm-order-next-step-button']",
-        thankYouMessage: "//h1[contains(text(), 'Thank you')]",
-        orderProcessedMessage: "//strong[contains(text(), 'Your order has been successfully processed!')]",
-        orderDetailsLink: "//a[contains(text(), 'Click here for order details.')]",
-    }
+export const checkoutLocators = {
+  firstName: "//input[@type='text' and @name='BillingNewAddress.FirstName']",
+  lastName: "//input[@name='BillingNewAddress.LastName']",
+  email: "//input[@name='BillingNewAddress.Email']",
+  company: "//input[@name='BillingNewAddress.Company']",
+  country: "//select[@name='BillingNewAddress.CountryId']",
+  state: "//select[@name='BillingNewAddress.StateProvinceId']",
+  city: "//input[@name='BillingNewAddress.City']",
+  address1: "//input[@name='BillingNewAddress.Address1']",
+  address2: "//input[@name='BillingNewAddress.Address2']",
+  zip: "//input[@name='BillingNewAddress.ZipPostalCode']",
+  phone: "//input[@name='BillingNewAddress.PhoneNumber']",
+  fax: "//input[@name='BillingNewAddress.FaxNumber']",
+  nextButton: "//button[@type='submit' and @id='billingaddress-next-button']",
+  shippingMethod: "//input[@type='radio' and @value='Ground___Shipping.FixedByWeightByTotal']",
+  shippingNextButton: "//button[@class='button-1 shipping-method-next-step-button']",
+  paymentMethod: "//input[@type='radio' and @value='Payments.CheckMoneyOrder']",
+  paymentNextButton: "//button[@class='button-1 payment-method-next-step-button']",
+  paymentInfoNextButton: "//button[@class='button-1 payment-info-next-step-button']",
+  confirmOrderButton: "//button[@class='button-1 confirm-order-next-step-button']",
+  thankYouMessage: "//h1[contains(text(), 'Thank you')]",
+  orderProcessedMessage: "//strong[contains(text(), 'Your order has been successfully processed!')]",
+  orderDetailsLink: "//a[contains(text(), 'Click here for order details.')]",
 };

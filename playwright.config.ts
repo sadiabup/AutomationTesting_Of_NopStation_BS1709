@@ -48,10 +48,14 @@ const config: PlaywrightTestConfig = {
  
   retries: 0, 
  
-  reporter: [
+  /*reporter: [
     ["dot"],
     ["json", { outputFile: "jsonReporters/jsonReport.json" }],
     ["html", { open: "always" }],
+  ],*/
+  reporter: [
+    ['list'],
+    ['allure-playwright'],
   ],
 };
  

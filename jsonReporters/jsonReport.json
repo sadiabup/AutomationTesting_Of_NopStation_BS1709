@@ -88,12 +88,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 12661,
+                      "duration": 11911,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-17T20:45:19.109Z",
+                      "startTime": "2025-01-17T21:56:19.076Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -126,7 +126,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 8266,
+                      "duration": 11649,
                       "errors": [],
                       "stdout": [
                         {
@@ -135,7 +135,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-17T20:45:32.288Z",
+                      "startTime": "2025-01-17T21:56:31.448Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -168,7 +168,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 25143,
+                      "duration": 23658,
                       "errors": [],
                       "stdout": [
                         {
@@ -177,7 +177,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-17T20:45:40.563Z",
+                      "startTime": "2025-01-17T21:56:43.110Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -210,7 +210,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 51169,
+                      "duration": 53700,
                       "errors": [],
                       "stdout": [
                         {
@@ -219,7 +219,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-01-17T20:46:05.717Z",
+                      "startTime": "2025-01-17T21:57:06.779Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -244,8 +244,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-01-17T20:45:18.462Z",
-    "duration": 98649.13100000001,
+    "startTime": "2025-01-17T21:56:18.070Z",
+    "duration": 102665.057,
     "expected": 4,
     "skipped": 0,
     "unexpected": 0,
