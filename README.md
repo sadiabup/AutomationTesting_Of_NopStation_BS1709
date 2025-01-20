@@ -236,4 +236,16 @@ test.use({ browserName: 'firefox' });
 
 #### Allure Report
 
+![Image](https://github.com/user-attachments/assets/db46a158-acc1-49b1-961b-8044233f4e9b)
+
+![Image](https://github.com/user-attachments/assets/4c169a58-fce1-4310-9f8b-06eea24ae9fe)
+
+![Image](https://github.com/user-attachments/assets/46ce501e-0d61-49a9-a1df-9e726c07cdaf)
+
+![Image](https://github.com/user-attachments/assets/1574a90b-d625-49c4-b587-440d4a1471ae)
+
+![Image](https://github.com/user-attachments/assets/13013527-99de-4179-9555-5d79377cdaf4)
+
+![Image](https://github.com/user-attachments/assets/9ad0ab28-ca93-4cdd-8633-1f2a9151b37d)
+
 
