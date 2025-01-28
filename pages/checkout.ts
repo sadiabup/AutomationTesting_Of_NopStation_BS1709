@@ -54,14 +54,14 @@ export default class Checkout {
       this.page.click(checkoutLocators.shippingNextButton),
     ]);
 
-    const paymentRadio = this.page.locator(checkoutLocators.paymentMethod);
-    await paymentRadio.check();
+   //const paymentRadio = this.page.locator(checkoutLocators.paymentMethod);
+    //await paymentRadio.check();
     await Promise.all([
       this.page.waitForNavigation({ waitUntil: "networkidle" }),
       this.page.click(checkoutLocators.paymentNextButton),
     ]);
 
-    await this.page.click(checkoutLocators.paymentInfoNextButton);
+    //await this.page.click(checkoutLocators.paymentInfoNextButton);
     await Promise.all([
       this.page.waitForNavigation({ waitUntil: "networkidle" }),
       this.page.click(checkoutLocators.confirmOrderButton),

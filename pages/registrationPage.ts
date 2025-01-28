@@ -5,6 +5,10 @@ export default class RegisterPage {
   constructor(private page: Page) {}
 
   // Actions
+  async navigateToRegister(url: string) {
+    await this.page.goto(url);
+  }
+
   async register() {
     await this.page.locator(registerLocators.registerLink).click();
   }
@@ -21,20 +25,12 @@ export default class RegisterPage {
     await this.page.locator(registerLocators.lastName).type(lastName);
   }
 
-  async enterDateOfBirth(dateOfBirth: string) {
-    await this.page.locator(registerLocators.dateOfBirth).selectOption(dateOfBirth);
-  }
-
   async enterEmail(email: string) {
     await this.page.locator(registerLocators.email).type(email);
   }
 
   async enterCompany(company: string) {
     await this.page.locator(registerLocators.company).type(company);
-  }
-
-  async enterNewsletterOption() {
-    await this.page.locator(registerLocators.newsletter).check();
   }
 
   async enterPassword(password: string) {
@@ -48,12 +44,12 @@ export default class RegisterPage {
   async clickRegister() {
     await Promise.all([
       this.page.waitForNavigation({ waitUntil: "networkidle" }),
-      this.page.locator(registerLocators.registerButton).click()
+      this.page.locator(registerLocators.registerButton).click(),
     ]);
   }
 
   async registerCompletedMessage() {
     const registrationMessage = await this.page.locator(registerLocators.registrationMessage);
-    expect(await registrationMessage.isVisible()).toBe(false);
+    expect(await registrationMessage.isVisible()).toBe(false); // Ensure message is visible
   }
 }

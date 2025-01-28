@@ -1,9 +1,11 @@
 import { Page, expect } from "@playwright/test";
 import { booksLocators } from "../dataFile/locators";
+import testData from "../dataFile/testData.json"; 
 
 export default class Books {
   constructor(private page: Page) {}
 
+  
   async clearCart() {
     const cartIcon = this.page.locator(booksLocators.cartIcon);
     await cartIcon.hover();
@@ -26,6 +28,7 @@ export default class Books {
     }
   }
 
+
   async addFirstAndSecondProductsToCart() {
     const addToCartButtons = this.page.locator(booksLocators.addToCartButton);
     await addToCartButtons.nth(0).click();
@@ -39,6 +42,7 @@ export default class Books {
     await cartIcon.click();
   }
 
+  
   async updateQuantityForProduct(productName: string, quantity: number) {
     const productRow = this.page.locator(booksLocators.productRow(productName));
     const quantityInput = productRow.locator(booksLocators.quantityInput);
@@ -51,8 +55,14 @@ export default class Books {
     await this.page.locator(booksLocators.checkoutButton).click();
   }
 
+  
   async verifyBillingAddressPage() {
     const billingAddressMessage = this.page.locator(booksLocators.billingAddressMessage);
     expect(await billingAddressMessage.isVisible()).toBe(true);
+  }
+
+  
+  async updateQuantityUsingTestData() {
+    await this.updateQuantityForProduct(testData.billingDetails.company, 2); 
   }
 }

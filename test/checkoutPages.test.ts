@@ -1,36 +1,35 @@
 import { expect, test } from "../fixture/testFixture";
-import { testData } from "../dataFile/testData";
+import registration from "../dataFile/registration.json";
+import login from "../dataFile/login.json";
+import testData from "../dataFile/testData.json";
 
 test.describe("Page Object Test Demo", () => {
   test("Register Test_01", async ({ page, registrationPage }) => {
-  
-    await page.goto(testData.url);
+    await registrationPage.navigateToRegister(registration.url);
     await registrationPage.register();
-    await registrationPage.enterFirstName(testData.billingDetails.firstName);
-    await registrationPage.enterLastName(testData.billingDetails.lastName);
-    await registrationPage.enterEmail(testData.email);
-    await registrationPage.enterCompany(testData.billingDetails.company);
-    await registrationPage.enterPassword(testData.password);
-    await registrationPage.enterConfirmPassword(testData.password);
+    await registrationPage.enterFirstName(registration.billingDetails.firstName);
+    await registrationPage.enterLastName(registration.billingDetails.lastName);
+    await registrationPage.enterEmail(registration.email);
+    await registrationPage.enterCompany(registration.billingDetails.company);
+    await registrationPage.enterPassword(registration.password);
+    await registrationPage.enterConfirmPassword(registration.password);
     await registrationPage.clickRegister();
     await registrationPage.registerCompletedMessage();
   });
 
-
   test("Login Test_02", async ({ page, loginPage }) => {
-    
-    await page.goto(testData.url);
+    await page.goto(login.url);
     await loginPage.navigateToLoginPage();
     await loginPage.verifyPageTitle();
-    await loginPage.login(testData.email, testData.password);
-
-    console.log("Login successful with email:", testData.email);
+    await loginPage.login(login.email, login.password);
+  
+    console.log("Login successful with email:", login.email);
   });  
   
   test("Add to Cart Test_03", async ({ page, loginPage, homePage, books }) => {
     await page.goto(testData.url);
     await loginPage.navigateToLoginPage();
-    await loginPage.login(testData.email, testData.password);
+    await loginPage.login(login.email, login.password);
     await books.clearCart();
     await homePage.clickOnBooks();
     await books.addFirstAndSecondProductsToCart();
@@ -44,7 +43,7 @@ test.describe("Page Object Test Demo", () => {
 
     
     await loginPage.navigateToLoginPage();
-    await loginPage.login(testData.email, testData.password);
+    await loginPage.login(login.email, login.password);
 
     
     await books.clearCart();
@@ -60,4 +59,6 @@ test.describe("Page Object Test Demo", () => {
 
     console.log("Checkout process completed and verified successfully.");
   });
+
+  
 });

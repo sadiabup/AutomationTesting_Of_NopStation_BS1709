@@ -1,5 +1,6 @@
 import { Page, expect } from "@playwright/test";
 import { loginLocators } from "../dataFile/locators";
+import login from "../dataFile/login.json"; 
 
 export default class LoginPage {
   constructor(private page: Page) {}
