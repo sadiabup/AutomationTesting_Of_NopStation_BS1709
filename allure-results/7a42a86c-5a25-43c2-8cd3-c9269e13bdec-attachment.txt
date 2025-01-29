@@ -1,2 +1,0 @@
-Cart is already empty.
-Add to Cart and Checkout process verified successfully.

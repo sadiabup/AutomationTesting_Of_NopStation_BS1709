@@ -1,5 +1,0 @@
-"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
-"","9477","Login Test_02","chrome","Mon Jan 27 17:47:02 CST 2025","passed","Mon Jan 27 17:47:12 CST 2025","Page Object Test Demo","test\checkoutPages.test.ts","",""
-"","11629","Register Test_01","chrome","Mon Jan 27 17:46:50 CST 2025","passed","Mon Jan 27 17:47:02 CST 2025","Page Object Test Demo","test\checkoutPages.test.ts","",""
-"","315818","Checkout Test Case 04","chrome","Mon Jan 27 17:47:41 CST 2025","broken","Mon Jan 27 17:52:56 CST 2025","Page Object Test Demo","test\checkoutPages.test.ts","",""
-"","28903","Add to Cart Test_03","chrome","Mon Jan 27 17:47:12 CST 2025","passed","Mon Jan 27 17:47:41 CST 2025","Page Object Test Demo","test\checkoutPages.test.ts","",""
